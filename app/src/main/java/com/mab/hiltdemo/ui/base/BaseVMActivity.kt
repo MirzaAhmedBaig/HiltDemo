@@ -3,6 +3,7 @@ package com.mab.hiltdemo.ui.base
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
+import com.mab.hiltdemo.ui.pages.DemoViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.reflect.ParameterizedType
 

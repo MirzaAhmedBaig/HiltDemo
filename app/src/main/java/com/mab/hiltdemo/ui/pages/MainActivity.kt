@@ -3,6 +3,7 @@ package com.mab.hiltdemo.ui.pages
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.OnLifecycleEvent
@@ -15,6 +16,8 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : BaseVMActivity<DemoViewModel, ActivityMainBinding>() {
+
+
     override fun getClassName(): String = MainActivity::class.java.simpleName
     override fun getViewBinding() = ActivityMainBinding.inflate(layoutInflater)
 

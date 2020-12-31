@@ -1,5 +1,6 @@
 package com.mab.hiltdemo.ui.pages
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -10,7 +11,9 @@ import com.mab.hiltdemo.data.repositories.DataRepository
 import com.mab.hiltdemo.ui.base.BaseViewModel
 import kotlinx.coroutines.launch
 
-class DemoViewModel(dataRepository: DataRepository) : BaseViewModel(dataRepository) {
+class DemoViewModel @ViewModelInject constructor(dataRepository: DataRepository) :
+    BaseViewModel(dataRepository) {
+
 
     private var _userExistResponse: MutableLiveData<Resource<SocialLoginResponse>> =
         MutableLiveData()
