@@ -48,6 +48,8 @@ class MainActivity : BaseVMActivity<DemoViewModel, ActivityMainBinding>() {
                 handleError(it)
             })
         })
+
+        viewModel.isUserExist("mirza@avantari.org")
     }
 
     private fun setListeners() {
